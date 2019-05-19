@@ -1,0 +1,29 @@
+{
+  "name": "@ztrehagem/phrase",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "generate random string",
+  "main": "index.js",
+  "bin": {
+    "phrase": "bin/phrase.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztrehagem/phrase.git"
+  },
+  "keywords": [
+    "randomstring",
+    "passphrase"
+  ],
+  "author": "Shigeki Suwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ztrehagem/phrase/issues"
+  },
+  "homepage": "https://github.com/ztrehagem/phrase#readme"
+}
