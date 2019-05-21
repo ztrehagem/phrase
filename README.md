@@ -17,6 +17,6 @@ zYZ4XwQz
 ```js
 const phrase = require('@ztrehagem/phrase')
 
-phrase() //=> 'cMvUEYGzKVDqDhSL'
+phrase(16) //=> 'cMvUEYGzKVDqDhSL'
 phrase(8) //=> 'KLEoBFA9'
 ```
