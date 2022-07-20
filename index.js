@@ -1,13 +1,23 @@
-function phrase(length) {
-  const a = 'a'.charCodeAt(0)
-  const z = 'z'.charCodeAt(0)
-  const lowers = new Array(z - a + 1).fill(0).map((v, i) => String.fromCharCode(a + i));
-  const uppers = lowers.map((c) => c.toUpperCase())
-  const numbers = '0123456789'.split('');
-  const chars = [...uppers, ...lowers, ...numbers];
-  return new Array(length).fill(0).map(() => Math.floor(Math.random() * chars.length)).map((rand) => chars[rand]).join('');
-}
-phrase.default = phrase;
-phrase.phrase = phrase;
+const a = 'a'.charCodeAt(0)
+const lowers = [...new Array(26)].map((v, i) => String.fromCharCode(a + i));
+const uppers = lowers.map((c) => c.toUpperCase())
+const numbers = '0123456789'.split('');
 
-module.exports = phrase;
+export const phrase = ({ size, upper, lower, number, chars = "" }) => {
+  size = Math.max(0, size);
+  const source = [...chars.split("")];
+
+  if (upper) {
+    source.push(...uppers);
+  }
+
+  if (lower) {
+    source.push(...lowers);
+  }
+
+  if (number) {
+    source.push(...numbers);
+  }
+
+  return [...new Array(size)].map(() => Math.floor(Math.random() * source.length)).map((rand) => source[rand]).join('');
+}

@@ -5,6 +5,11 @@
     "access": "public"
   },
   "description": "generate random string",
+  "engines": {
+    "node": ">=18.3.0"
+  },
+  "engineStrict": true,
+  "type": "module",
   "main": "index.js",
   "bin": {
     "phrase": "bin/phrase.js"
